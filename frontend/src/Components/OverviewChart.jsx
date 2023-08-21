@@ -7,6 +7,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
   const { data, isLoading } = useGetSalesQuery();
   //   console.log(data);
+
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!data) return [];
 
@@ -40,7 +41,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       { sales: 0, units: 0 }
     );
     return [[totalSalesLine], [totalUnitsLine]];
-  }, [data]);
+  }, [data, theme]);
 
   if (!data || isLoading) return <>Loading...</>;
 
