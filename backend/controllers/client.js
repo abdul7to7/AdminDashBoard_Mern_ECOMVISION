@@ -7,18 +7,44 @@ const getCountryIso3 = require("country-iso-2-to-3");
 const getProducts = async (req, res) => {
   try {
     //Use Aggregate fxn instead of thi shit
-    const products = await Product.find();
-    const productStats = await Promise.all(
-      products.map(async (product) => {
-        const stat = await ProductStat.find({
-          productId: product._id,
-        });
-        return {
-          ...product._doc,
-          stat,
-        };
-      })
-    );
+    const productStats = await Product.aggregate([
+      [
+        {
+          $lookup: {
+            from: "productstats",
+            let: { productStrId: { $toString: "$_id" } }, // Convert _id to string
+            pipeline: [
+              {
+                $match: {
+                  $expr: { $eq: ["$$productStrId", "$productId"] },
+                },
+              },
+            ],
+            as: "stat",
+          },
+        },
+        {
+          $addFields: {
+            stat: { $arrayElemAt: ["$stat", 0] },
+          },
+        },
+        {
+          $project: {
+            _id: 1,
+            name: 1,
+            description: 1,
+            price: 1,
+            rating: 1,
+            category: 1,
+            supply: 1,
+            // Add other fields you want to keep from the 'products' collection
+            "stat.yearlySalesTotal": 1,
+            "stat.yearlyTotalSoldUnits": 1,
+          },
+        },
+      ],
+    ]);
+
     res.status(200).json(productStats);
   } catch (err) {
     res.status(404).json({ message: err.message });

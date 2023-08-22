@@ -72,13 +72,13 @@ const Product = ({
         }}
       >
         <CardContent>
-          <Typography>id:{_id}</Typography>
-          <Typography>Supply Left:{supply}</Typography>
+          <Typography>id: {_id}</Typography>
+          <Typography>Supply Left: {supply}</Typography>
           <Typography>
-            Yearly sales this year:{stat[0]?.yearlySalesTotal}
+            Yearly sales this year: {stat?.yearlySalesTotal}
           </Typography>
           <Typography>
-            Yearly units sold this year:{stat[0]?.yearlyTotalSoldUnits}
+            Yearly units sold this year: {stat?.yearlyTotalSoldUnits}
           </Typography>
         </CardContent>
       </Collapse>
