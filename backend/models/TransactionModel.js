@@ -1,0 +1,17 @@
+const mongoose = require("mongoose");
+
+const TransactionSchema = new mongoose.Schema(
+  {
+    //this should be required in Transactionion
+    userId: String,
+    cost: String,
+    products: {
+      type: [mongoose.Types.ObjectId],
+      of: Number,
+    },
+  },
+  { timestamps: true }
+);
+
+const Transaction = mongoose.model("Transaction", TransactionSchema);
+module.exports = Transaction;
