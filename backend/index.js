@@ -46,7 +46,7 @@ app.use("/management", management);
 app.use("/sales", sales);
 
 //mongoose setup
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8080;
 mongoose
   .connect(process.env.DB_URI, {
     useNewUrlParser: true,
