@@ -13,7 +13,8 @@ const management = require("./Routes/management");
 const general = require("./Routes/general");
 
 app.use(cors({
-  origin: '*'
+  origin: 'https://ecomvisiondash.netlify.app',
+  credentials: true
 }));
 
 //data imports
