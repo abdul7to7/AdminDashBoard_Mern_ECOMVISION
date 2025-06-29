@@ -12,6 +12,8 @@ const sales = require("./Routes/sales");
 const management = require("./Routes/management");
 const general = require("./Routes/general");
 
+const app = express();
+
 app.use(cors({
   origin: 'https://ecomvisiondash.netlify.app',
   credentials: true
@@ -35,7 +37,7 @@ const AffiliateStat = require("./models/AffiliateStat");
 
 //Configuration
 dotenv.config();
-const app = express();
+
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
