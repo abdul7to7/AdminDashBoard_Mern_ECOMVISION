@@ -12,12 +12,7 @@ const sales = require("./Routes/sales");
 const management = require("./Routes/management");
 const general = require("./Routes/general");
 
-const app = express();
 
-app.use(cors({
-  origin: 'https://ecomvisiondash.netlify.app',
-  credentials: true
-}));
 
 //data imports
 const User = require("./models/UserModel");
