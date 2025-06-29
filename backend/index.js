@@ -12,6 +12,10 @@ const sales = require("./Routes/sales");
 const management = require("./Routes/management");
 const general = require("./Routes/general");
 
+app.use(cors({
+  origin: '*'
+}));
+
 //data imports
 const User = require("./models/UserModel");
 const {
@@ -37,10 +41,7 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({
-  origin: 'https://ecomvisiondash.netlify.app',
-  credentials: true
-}));
+
 
 //Routes
 app.use("/client", client);
