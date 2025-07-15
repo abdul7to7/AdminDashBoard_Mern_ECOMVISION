@@ -1,6 +1,6 @@
 // color design tokens export
 export const tokensDark = {
-  rey: {
+  grey: {
   0: "#1a1a1a",
   10: "#1e1e1e",
   50: "#2a2a2a",
@@ -41,7 +41,7 @@ secondary: {
   700: "#ffb300",
   800: "#ffc107",
   900: "#ffd54f",
-}
+},
 };
 
 // function that reverses the color palette
