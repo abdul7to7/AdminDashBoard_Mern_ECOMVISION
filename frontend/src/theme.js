@@ -1,45 +1,47 @@
 // color design tokens export
 export const tokensDark = {
   grey: {
-    0: "#ffffff", // manually adjusted
-    10: "#f6f6f6", // manually adjusted
-    50: "#f0f0f0", // manually adjusted
-    100: "#e0e0e0",
-    200: "#c2c2c2",
-    300: "#a3a3a3",
-    400: "#858585",
-    500: "#666666",
-    600: "#525252",
-    700: "#3d3d3d",
-    800: "#292929",
-    900: "#141414",
-    1000: "#000000", // manually adjusted
-  },
-  primary: {
-    // blue
-    100: "#d3d4de",
-    200: "#a6a9be",
-    300: "#7a7f9d",
-    400: "#4d547d",
-    500: "#21295c",
-    600: "#191F45", // manually adjusted
-    700: "#141937",
-    800: "#0d1025",
-    900: "#070812",
-  },
-  secondary: {
-    // yellow
-    50: "#f0f0f0", // manually adjusted
-    100: "#fff6e0",
-    200: "#ffedc2",
-    300: "#ffe3a3",
-    400: "#ffda85",
-    500: "#ffd166",
-    600: "#cca752",
-    700: "#997d3d",
-    800: "#665429",
-    900: "#332a14",
-  },
+  0: "#ffffff",
+  10: "#f5f5f5",
+  50: "#ebebeb",
+  100: "#d6d6d6",
+  200: "#bfbfbf",
+  300: "#a8a8a8",
+  400: "#919191",
+  500: "#7a7a7a",
+  600: "#5c5c5c",
+  700: "#3f3f3f",
+  800: "#262626",
+  900: "#121212",
+  1000: "#000000",
+},
+
+primary: {
+  // Teal / Cyan
+  100: "#ccf2f4",
+  200: "#99e6e9",
+  300: "#66d9df",
+  400: "#33cdd4",
+  500: "#00c0ca",
+  600: "#009aa2",
+  700: "#00747a",
+  800: "#004e52",
+  900: "#00282a",
+},
+
+secondary: {
+  // Orange
+  50: "#fff3e6",
+  100: "#ffe0bf",
+  200: "#ffcc99",
+  300: "#ffb873",
+  400: "#ffa34d",
+  500: "#ff8f26",
+  600: "#cc721f",
+  700: "#995618",
+  800: "#663911",
+  900: "#331d09",
+},
 };
 
 // function that reverses the color palette
