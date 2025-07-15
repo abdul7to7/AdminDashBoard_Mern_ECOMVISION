@@ -16,7 +16,7 @@ function Header({ title, subtitle, isLoading }) {
         {title}
       </Typography>
       <Typography variant="h5" color={theme.palette.secondary[300]}>
-        {subtitle + "I’ve hosted the backend server on Render, so it might take around 25 to 30 seconds to load at first due to cold start. This is a large project with many features built using React and Node.js. I did take help and references from other sources, but I wrote every line of code myself and can clearly explain how everything works."} {title === "DASHBOARD" && isLoading ? <Timer /> : <></>}
+        {subtitle + ", I’ve hosted the backend server on Render, so it might take around 25 to 30 seconds to load at first due to cold start. This is a large project with many features built using React and Node.js. I did take help and references from other sources, but I wrote every line of code myself and can clearly explain how everything works."} {title === "DASHBOARD" && isLoading ? <Timer /> : <></>}
       </Typography>
     </Box>
   );
